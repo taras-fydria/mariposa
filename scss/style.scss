@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300i,400,500,600,600i,700');
+@import "normalize";
+@import "layout";
+@import "elements";
+
+
+$color-main:rgba(253, 180, 97, 0.82);
+$color-brown:rgba(62, 34, 3, 0.82);
+
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.7;
+	background: url(../img/first-bg.jpg) no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+	// background: linear-gradient(180deg, rgba(0, 0, 0, 0) 67.4%, #000000 100%), url(kyle-cottrell-672820-unsplash.jpg);
+
+}
+
+// .ba-background {
+// 	position: absolute;
+// 	z-index: 0;
+// 	top: 0;
+// 	right: 0;
+// 	left: 0;
+// 	// background: url(../img/first-bg.jpg) no-repeat;
+// 	// background-size: cover
+
+
+// 	img {
+// 		width: 100%;
+// 		height: auto;
+// 	}
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0 0 10px;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+/* Layout */
+.ba-container {
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1196px;
+}
+
+.ba-header {
+	padding: 56px 0 56px;
+
+	&__container {
+		max-width: 1324px;
+		padding-right: 20px;
+		padding-left: 20px;
+		margin: 0 auto;
+
+		@media screen and (max-width: 1400px) {
+			max-width: 1196px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+	}
+
+	&__logo {
+		font-size: 14px;
+	}
+
+	&__menu {
+		list-style: none;
+		margin: 0;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	&__items+&__items {
+		margin-left: 40px;
+	}
+
+	&__items {
+		a {
+			font-size: 14px;
+			font-weight: 400;
+			padding: 5px 10px;
+			border-radius: 5px;
+
+			&:hover {
+				color: $color-brown;
+
+				border-radius: 5px;
+				background: $color-main;
+
+			}
+		}
+	}
+
+}
+
+.ba-main {
+	padding: 150px 0 50px;
+
+	.ba-keeping {
+		padding: 20px 0;
+
+		&__col {
+			width: 60%;
+		}
+
+		&__title {
+			font-size: 72px;
+			font-weight: 700;
+			line-height: 1.2;
+			margin-bottom: 35px;
+
+		}
+
+		p+p {
+			margin-top: 16px;
+			margin-bottom: 37px;
+		}
+
+		&__butons {
+			padding-bottom: 20px;
+
+			.ba-button {
+				color: $color-brown;
+				font-size: 18px;
+				font-weight: 600;
+				width: 150px;
+				height: 51px;
+				background: #ffffff;
+				border: $color-brown solid 2px;
+				border-radius: 5px;
+				padding: 0;
+
+				&:hover {
+					border: none;
+					background: $color-main;
+				}
+			}
+
+			.ba-button+.ba-button {
+				margin-left: 24px;
+			}
+		}
+	}
+}
+
+.ba-finding {
+	padding: 241px 0 50px;
+	color: #ffffff;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+	}
+
+	&__col {
+		&--left {
+			width: 38.25%;
+			position: relative;
+
+			.ba-absolute-1 {
+				top: 0;
+				left: 0;
+				z-index: 3;
+				position: absolute;
+				border-radius: 8px;
+
+			}
+
+			.ba-absolute-2 {
+				top: 124px;
+				right: 0;
+				z-index: 2;
+				position: absolute;
+				border-radius: 8px;
+			}
+
+			.ba-absolute-3 {
+				top: 296px;
+				left: 42px;
+				z-index: 1;
+				position: absolute;
+				border-radius: 8px;
+			}
+		}
+
+		&--right {
+			width: 55.27%;
+			padding-top: 46px
+		}
+	}
+
+	&__title {
+		color: #ffffff;
+		font-size: 64px;
+		font-weight: 400;
+		line-height: 1.2;
+		margin-bottom: 33px;
+
+	}
+
+	&__link {
+		font-size: 18px;
+		text-transform: uppercase;
+		text-decoration: underline;
+		color: $color-main;
+		margin-top: 36px;
+		display: block;
+
+		&:hover {
+			text-decoration: none;
+			color: $color-brown;
+		}
+	}
+
+	.ba-cytate {
+		padding: 118px 0 0px;
+		display: flex;
+		align-items: flex-start;
+
+		&__img {
+			min-width: 64px;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		&__text {
+			padding-left: 20px;
+
+			blockquote {
+				margin: 0;
+				font-weight: 500;
+				font-style: italic;
+				margin-bottom: 15px;
+			}
+
+			address {
+				opacity: 0.6;
+				font-weight: 400;
+				font-style: italic;
+			}
+		}
+	}
+
+}
+
+.ba-footer {
+	padding: 5px 0;
+}
+
+.ba-copyright {
+	color: #ffffff;
+	font-size: 16px;
+	opacity: 0.6;
+	font-weight: 400;
+}
